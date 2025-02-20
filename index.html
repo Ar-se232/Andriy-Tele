@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Алмазний стиль</title>
+    <style>
+        body {
+            background: linear-gradient(45deg, #0f0f0f, #1a1a1a);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .diamond-button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #00e1ff, #0077ff);
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.8);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .diamond-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 0px 40px rgba(0, 255, 255, 1);
+        }
+
+        .info-box {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+            margin-bottom: 20px;
+            width: 300px;
+        }
+
+        .status-online {
+            color: #00ff00;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="info-box">
+        <p>Час сервера: <span id="server-time">Завантаження...</span></p>
+        <p>Статус сервера: <span id="server-status" class="status-online">Онлайн</span></p>
+    </div>
+
+    <a href="https://t.me/+QWWhCYaW4fxlZmUy" class="diamond-button" target="_blank">Приєднатися</a>
+    <a href="https://t.me/AND_ROID7" class="diamond-button" target="_blank">Підтримка</a>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            document.getElementById("server-time").textContent = now.toLocaleTimeString("uk-UA");
+        }
+
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
